@@ -39,7 +39,7 @@ app.get("/user/:id",checkToken,  async (req, res)=>{ // a função checktoken ta
     const token = authHeader && authHeader.split(' ')[1] // o metódo split divide uma String em uma lista ordenada de substrings, coloca essas
                                                         // substrings em um array e retorna o array.  
     
-     //se nao tiver token, dá Acessi negado                                                   
+     //se nao tiver token, dá Acesso negado                                                   
     if(!token){
         return res.status(401).json({msg:" Acesso negado!"})
     }
